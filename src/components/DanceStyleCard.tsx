@@ -9,24 +9,25 @@ interface Props {
 const useStyles = makeStyles({
   root: {},
   background: {
-    position: "relative",
+    position: "absolute",
+    top: "1rem",
+    left: "0",
     height: "70px",
     width: "70px",
     backgroundColor: "#d6d6d6",
     borderRadius: "32%",
-    top: 0,
-    left: 0,
-    overflow: "hidden",
+    zIndex: -1,
   },
   imageContainer: {
     position: "relative",
-    overflow: "hidden",
     height: "70px",
     width: "70px",
+    paddingBottom: "1rem",
   },
   image: {
-    objectPosition: "center",
-    height: "60px",
+    objectFit: "contain",
+    height: "100%",
+    width: "100%",
   },
   text: {
     textAlign: "center",
@@ -38,13 +39,13 @@ const DanceStyleCard = (props: Props) => {
   const classes = useStyles(props);
   return (
     <div className={classes.root}>
-      {/* <div className={classes.imageContainer}></div> */}
-      <div className={classes.background}>
+      <div className={classes.imageContainer}>
         <img
           src={require("../assets/logo512.png")}
           alt='logo'
           className={classes.image}
         />
+        <div className={classes.background}></div>
       </div>
 
       <Typography className={classes.text}>{props.title}</Typography>
