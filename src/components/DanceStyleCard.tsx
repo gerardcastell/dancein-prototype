@@ -12,8 +12,8 @@ const useStyles = makeStyles({
     position: "absolute",
     top: "1rem",
     left: "0",
-    height: "70px",
-    width: "70px",
+    height: "100%",
+    width: "100%",
     backgroundColor: "#d6d6d6",
     borderRadius: "32%",
     zIndex: -1,
@@ -22,7 +22,6 @@ const useStyles = makeStyles({
     position: "relative",
     height: "70px",
     width: "70px",
-    paddingBottom: "1rem",
   },
   image: {
     objectFit: "contain",
@@ -30,7 +29,9 @@ const useStyles = makeStyles({
     width: "100%",
   },
   text: {
+    paddingTop: "1rem",
     textAlign: "center",
+    textTransform: "capitalize",
     color: (props: Props) => (props.color ? props.color : "green"),
   },
 });
