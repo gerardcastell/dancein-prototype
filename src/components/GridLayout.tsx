@@ -1,6 +1,7 @@
 import React from "react";
 import Grid from "@material-ui/core/Grid";
 import { DanceStyles } from "./DanceStyles";
+import { Flayer } from "./Flayer";
 export default () => {
   return (
     <div>
@@ -10,10 +11,10 @@ export default () => {
           <Grid item xs={2}>
             <DanceStyles></DanceStyles>
           </Grid>
-          <Grid item container direction='column' xs={5}>
-            Header
+          <Grid item xs={5}>
+            <Flayer></Flayer>
           </Grid>
-          <Grid item container direction='column' xs={5}>
+          <Grid item xs={5}>
             Header
           </Grid>
         </Grid>
